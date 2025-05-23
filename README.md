@@ -32,11 +32,7 @@ npm install
 3. Start the development server:
 
 bash
-npm run dev
-or
-
-bash
-npm start
+npm run dev  or  npm start
 
 4. Vite will open the web apllication now:
 
