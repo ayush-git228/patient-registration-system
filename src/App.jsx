@@ -51,6 +51,7 @@ export default function App() {
   return (
     <div className = "patient-app" classstyle={{ maxWidth: 700, margin: "0 auto" }}>
       <h1>Patient Registration</h1>
+      
       <PatientForm onRegister={handleDbChange} />
       <PatientList refresh={refresh} />
       <SQLConsole onDbChange={handleDbChange} />
