@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
-  },
+  }, 
   "dependencies": {
     "@electric-sql/pglite": "^0.3.2",
     "@electric-sql/pglite-react": "^0.2.20",
