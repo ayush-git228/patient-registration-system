@@ -40,6 +40,7 @@ Patient Registration App: A React + PGlite application for registering and manag
   This app is deployed at: https://patient-registration-system.vercel.app
 
 
+
 🚧 Challenges Faced
 1. Service Worker Integration
    Issue: Pglite didn't supported multi tab sync on it's own so used service workers but it increased complexity and was showing inconsistent results.
@@ -61,4 +62,5 @@ Patient Registration App: A React + PGlite application for registering and manag
 
 4. Data Lost on every Page Refresh
    Issue: PGlite was running in in-memory mode, so was not persistent on refresh.
+   
    Fix: Switching to IndexedDB-backed storage (idb://) made the data persist across sessions, ensuring user information is retained even after reloading or closing the browser.
