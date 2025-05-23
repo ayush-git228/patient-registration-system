@@ -6,7 +6,7 @@ export default function PatientList({ refresh }) {
   const [patients, setPatients] = useState([]);
   const [error, setError] = useState(null);
 
-   // Fetching patients from DB whenever 'refresh' changes
+  // Fetching patients from DB whenever 'refresh' changes
   useEffect(() => {
     let mounted = true;
     (async () => {
