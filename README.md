@@ -21,7 +21,7 @@ All form fields include helpful placeholders and error messages.
 1. Clone the repository:
 
 bash
-git clone https://github.com/ayush-git228/patient-registration-app.git
+git clone https://github.com/ayush-git228/patient-registration-system.git
 cd patient-app
 
 2. Install dependencies:
@@ -47,4 +47,4 @@ npm run dev  or  npm start
 
 6. 🌐 Deployment
 This app is deployed at:
-https://patient-registration.vercel.app
+https://patient-registration-system.vercel.app
