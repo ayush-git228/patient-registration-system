@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { getDb, buildInsertPatientSQL } from "../db/pglite";
 import { patientFields } from "../db/PatientSchema";
+import { validateForm } from "../utils/ValidateForm"; // adjust the path 
 
 export default function PatientForm({ onRegister }) {
   const [form, setForm] = useState(() =>
@@ -15,6 +16,15 @@ export default function PatientForm({ onRegister }) {
   const handleSubmit = async e => {
     e.preventDefault();
     setError(null);
+
+    // Validate form data
+    const errors = validateForm(form);
+    if (Object.keys(errors).length > 0) {
+      // Show the first error
+      setError(Object.values(errors)[0]);
+      return;
+    }
+
     try {
       const db = await getDb();
       const sql = buildInsertPatientSQL(form);

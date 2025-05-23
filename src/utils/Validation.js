@@ -15,7 +15,7 @@ export const validationRules = {
     required: true,
     validate: val => {
       if (!val) return "Phone number is required";
-      const phoneRegex = /^[\d\s+()-]{7,}$/;
+      const phoneRegex = /^\d{10}$/;
       return phoneRegex.test(val) || "Invalid phone number";
     },
   },
@@ -48,7 +48,7 @@ function isValidDateString(str) {
   // Parse and check for real date
   const [year, month, day] = str.split('-').map(Number);
   const date = new Date(str);
-  
+
   return (
     date instanceof Date &&
     !isNaN(date) &&

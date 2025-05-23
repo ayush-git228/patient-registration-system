@@ -23,9 +23,16 @@ export default function PatientList({ refresh }) {
     return () => { mounted = false; };
   }, [refresh]);
 
+  function isDateString(val) {
+    // check for ISO date string
+    return typeof val === "string" && /^\d{4}-\d{2}-\d{2}/.test(val);
+  }
+
   if (error) return <div style={{ color: "red" }}>Error: {error}</div>;
   if (!patients.length)
-    return <div style={{ margin: "16px 0", color: "#555" }}>No patients registered yet.</div>;
+    return <div style={{ margin: "16px 0", color: "#555", textAlign: "center", width: "100%" }}>
+              No patients registered yet.
+            </div>
 
   return (
     <div className="patients-table-container">
@@ -42,11 +49,28 @@ export default function PatientList({ refresh }) {
           {patients.map(row => (
             <tr key={row.id}>
               <td>{row.id}</td>
-              {patientFields.map(f => <td key={f.name}>{row[f.name]}</td>)}
-              <td>{String(row.registered_at).slice(0, 10)}</td>
+              {patientFields.map(f => (
+                <td key={f.name}>
+                  {row[f.name] instanceof Date
+                    ? row[f.name].toISOString().slice(0, 10) // for Date objects
+                    : (isDateString(row[f.name])
+                      ? row[f.name].slice(0, 10) // for ISO date strings
+                      : row[f.name])}
+                </td>
+              ))}
+              <td>
+                {row.registered_at
+                  ? (row.registered_at instanceof Date
+                    ? row.registered_at.toISOString().slice(0, 10)
+                    : (isDateString(row.registered_at)
+                      ? row.registered_at.slice(0, 10)
+                      : row.registered_at))
+                  : ""}
+              </td>
             </tr>
           ))}
         </tbody>
+
       </table>
     </div>
   );
