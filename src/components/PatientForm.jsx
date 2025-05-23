@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { getDb, buildInsertPatientSQL } from "../db/pglite";
 import { patientFields } from "../db/PatientSchema";
 
-
 export default function PatientForm({ onRegister }) {
   const [form, setForm] = useState(() =>
     Object.fromEntries(patientFields.map(f => [f.name, ""]))
