@@ -5,7 +5,7 @@ let dbInstance = null;
 
 export async function getDb() {
   if (dbInstance) return dbInstance;
-  dbInstance = await PGlite.create("idb://patients-db");  // standard as per the doc
+  dbInstance = await PGlite.create("idb://patients-db");  // standard as per the pglite doc
   return dbInstance;
 }
 
