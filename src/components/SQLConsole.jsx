@@ -32,6 +32,7 @@ export default function SQLConsole({ onDbChange }) {
     e.preventDefault();
     setError(null);
     setResult(null);
+    
     try {
       const db = await getDb();
       await db.query(
