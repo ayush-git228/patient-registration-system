@@ -12,7 +12,7 @@ export default function useBroadcastChannel(channelName, onMessage) { // onMessa
     // Listening to messages
     channel.onmessage = onMessage;
 
-    return () => {           // Cleanup on unmount
+    return () => {     // Cleanup on unmount
       channel.close();    
     };
   }, [channelName, onMessage]);
