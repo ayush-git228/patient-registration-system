@@ -19,6 +19,5 @@ export function validateForm(formData) {
       }
     }
   }
-
   return errors;
 }
