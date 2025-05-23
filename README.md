@@ -12,9 +12,16 @@ Patient Registration App: A React + PGlite application for registering and manag
 
 4. SQL Data Integrity:
    Database schema enforces correct date format and non-null constraints.
+   
+5. Command History and Query Results:
 
-5. User Experience:
-   All form fields include helpful placeholders and error messages.
+   This section displays previously executed commands for easy re-selection and modification. 
+
+   It also presents query results in a clear JSON format.
+
+6. User Experience:
+
+   All form fields include helpful placeholders and clear error messages, further enhanced by styling applied consistently through CSS.
 
 📝 Setup Instructions
 1. Clone the repository: git clone https://github.com/ayush-git228/patient-registration-system.git
