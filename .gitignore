@@ -1,11 +1,11 @@
 # dependencies
-node_modules/
+node_modules/ 
 
 # production
 dist/
 build/
 
-# misc
+#misc
 .DS_Store
 Thumbs.db
 
