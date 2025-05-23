@@ -48,6 +48,7 @@ function isValidDateString(str) {
   // Parse and check for real date
   const [year, month, day] = str.split('-').map(Number);
   const date = new Date(str);
+  
   return (
     date instanceof Date &&
     !isNaN(date) &&
