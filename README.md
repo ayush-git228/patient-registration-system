@@ -37,7 +37,8 @@ Patient Registration App: A React + PGlite application for registering and manag
 - Patient list updates instantly across all open tabs.
 
 6. 🌐 Deployment
-  This app is deployed at: https://patient-registration-system.vercel.app
+  This app is deployed at: [https://pglite-patient-registration.netlify.app/]
+
 
 
 
