@@ -43,6 +43,13 @@ Patient Registration App: A React + PGlite application for registering and manag
 
 - Patient list updates instantly across all open tabs.
 
+- For SQL queries use table name :- patients (eg. SELECT * FROM patients;)
+
+- For SQL queries take field names for eg. used in this query :- INSERT INTO patients (name, email, phone, address, dob, gender)
+     VALUES ('Abc User', 'abc@example.com', '9876543210', 'home', '2000-10-13', 'Male');
+  
+
+
 6. 🌐 Deployment
   This app is deployed at: [https://pglite-patient-registration.netlify.app/]
 
